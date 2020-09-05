@@ -1,0 +1,14 @@
+$primary-color: color('blue', 'darken-4');
+
+$admin-bg-color: #f4f4f4;
+
+$header-bg-color: $primary-color;
+$header-fg-color: #fff;
+
+$titlebar-bg-color: lighten($primary-color, 10%);
+$titlebar-fg-color: #9ab;
+$titlebar-fg-link-color: #fff;
+
+$footer-bg-color: $titlebar-bg-color;
+$footer-fg-color: $titlebar-fg-color;
+$footer-fg-link-color: $titlebar-fg-link-color;

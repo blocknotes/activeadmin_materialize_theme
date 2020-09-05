@@ -1,0 +1,43 @@
+body.active_admin .title_bar {
+  @extend .row;
+
+  background: $titlebar-bg-color;
+  margin-bottom: 0;
+  padding: 1rem;
+
+  .action_item >a {
+    @extend .btn, .btn-small;
+  }
+
+  .breadcrumb >a {
+    color: $titlebar-fg-link-color;
+    font-size: 1.4rem;
+  }
+
+  .breadcrumb_sep {
+    color: $titlebar-fg-color;
+    font-size: 1.4rem;
+  }
+
+  #titlebar_left {
+    @extend .col, .s6;
+
+    color: $titlebar-fg-color;
+    font-size: 1.4rem;
+
+    h2 {
+      display: inline-block;
+      font-size: 1.6rem;
+      line-height: 3.3rem;
+      margin: 0;
+    }
+  }
+
+  #titlebar_right {
+    @extend .col, .s6;
+
+    .action_items {
+      @extend .right-align;
+    }
+  }
+}

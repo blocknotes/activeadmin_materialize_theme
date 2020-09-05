@@ -1,0 +1,18 @@
+body.active_admin .footer {
+  @extend .row;
+
+  background: $footer-bg-color;
+  bottom: 0;
+  color: $footer-fg-color;
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+
+  a {
+    color: $footer-fg-link-color;
+  }
+
+  >p {
+    @extend .col, .s12, .center-align;
+  }
+}

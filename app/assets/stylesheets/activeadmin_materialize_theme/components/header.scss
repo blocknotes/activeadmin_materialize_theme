@@ -1,0 +1,61 @@
+body.active_admin .header {
+  @extend .row;
+
+  background: $header-bg-color;
+  margin-bottom: 0;
+
+  a {
+    color: $header-fg-color;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  #site_title {
+    @extend .col, .s3;
+
+    color: $header-fg-color;
+    font-size: 2.6rem;
+    height: 6.4rem;
+    line-height: 6.4rem;  
+    margin: 0;
+    padding: 0 1.6rem;
+  }
+
+  #tabs {
+    @extend .col, .s9, .right-align;
+
+    height: 6.4rem;
+    line-height: 6.4rem;  
+
+    .menu_item {
+      &.current >a {
+        background: darken($primary-color, 15%);
+      }
+
+      >a {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  #utility_nav {
+    @extend .col, .s12, .right-align;
+
+    background: $titlebar-bg-color;
+    height: 2.2rem;
+    line-height: 2.2rem;
+
+    a {
+      font-size: 1.1rem;
+      padding: 0 0.8rem;
+    }
+  }
+
+  .tabs {
+    background: $header-bg-color;
+  }
+}

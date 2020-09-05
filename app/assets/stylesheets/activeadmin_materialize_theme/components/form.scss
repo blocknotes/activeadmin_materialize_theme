@@ -1,0 +1,140 @@
+body.active_admin {
+  .filter_form {
+    input {
+      font-size: 1.4rem;
+    }
+  }
+
+  .formtastic {
+    padding: 1rem;
+
+    fieldset {
+      @extend .row;
+
+      border: none;
+      margin: 0;
+    }
+
+    .actions ol, .inputs ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .actions {
+      margin-top: 1.4rem;
+      padding: 0;
+
+      a {
+        @extend .btn;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      .cancel >a {
+        @extend .grey;
+      }
+    }
+
+    .button {
+      @extend .btn;
+    }
+
+    .datetime_select {
+      .fragments {
+        padding-bottom: 0;
+      }
+
+      .fragments-group {
+        @extend .row;
+      }
+
+      .fragment {
+        @extend .col, .s4;
+      }
+    }
+
+    .field_with_errors {
+      >input {
+        border-bottom: 1px solid color('materialize-red', 'base');
+      }
+
+      >label {
+        color: color('materialize-red', 'base');
+      }
+    }
+
+    .inline-errors {
+      color: color('materialize-red', 'base');
+      margin: 0;
+    }
+
+    >.inputs {
+      @extend .card;
+
+      padding-bottom: 1rem;
+      padding-top: 3rem;
+      position: relative;
+
+      >legend {
+        display: block;
+        font-size: 1.8rem;
+        left: 1rem;
+        position: absolute;
+        top: 1rem;
+      }
+    }
+
+    .input-field {
+      margin-top: 3rem;
+
+      &.boolean > label {
+        position: relative;
+      }
+
+      &.file, &.select {
+        >label {
+          margin-top: -3rem;
+        }
+      }
+
+      label {
+        font-size: 1.2rem;
+      }
+
+      input, textarea {
+        font-size: 1.4rem;
+      }
+    }
+
+    .has_many_container {
+      @extend .card;
+
+      margin: 1.4rem -0.7rem 0 -0.8rem;
+      padding: 1rem;
+      position: relative;
+
+      >h3 {
+        font-size: 2.2rem;
+        margin: 0.4rem 0 0 0;
+      }
+
+      >.has_many_add {
+        background-color: color('cyan', 'base');
+        margin-top: 0.4rem;
+      }
+
+      .has_many_remove {
+        background-color: color('materialize-red', 'base');
+      }
+
+      >.inputs {
+        margin: 0;
+        padding: 0.8rem;
+      }
+    }
+  }
+}

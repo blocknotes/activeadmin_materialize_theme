@@ -1,0 +1,37 @@
+body.active_admin .sidebar {
+  form >.input {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 24px 24px 0 24px;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+
+    >[type="submit"] {
+      @extend .btn, .btn-small;
+    }
+
+    >.clear_filters_btn {
+      padding-left: 1rem;
+    }
+  }
+
+  .sidebar_section {
+    @extend .card;
+
+    >.panel_contents {
+      @extend .card-content;
+
+      padding-top: 1rem;
+    }
+  }
+}

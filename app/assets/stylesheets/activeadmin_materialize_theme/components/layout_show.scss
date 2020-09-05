@@ -1,0 +1,56 @@
+body.active_admin.show {
+  .active_admin_comment {
+    margin-top: 1rem;
+  }
+
+  #main_content {
+    @extend .card;
+
+    .attributes_table {
+      tr >th {
+        width: 30rem;
+      }
+
+      td, th {
+        padding: 0.5rem;
+      }
+    }
+
+    .comments {
+      h4 {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+
+      [data-method="delete"] {
+        color: color('materialize-red', 'base');
+      }
+
+      .active_admin_comment {
+        font-size: 1.4rem;
+      }
+
+      .active_admin_comment_meta >a {
+        float: right;
+        padding: 0 1rem;
+      }
+
+      .active_admin_comment_meta >span {
+        float: right;
+      }
+
+      .pagination_information {
+        margin-top: 1.5rem;
+      }
+    }
+
+    >.comments, >.panel {
+      @extend .card-content;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin: 0.5rem 0 1.5rem 0;
+    }
+  }
+}

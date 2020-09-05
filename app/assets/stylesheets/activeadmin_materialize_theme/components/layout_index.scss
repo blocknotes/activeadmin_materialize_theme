@@ -1,0 +1,83 @@
+body.active_admin.index {
+  .index_as_table {
+    >table {
+      @extend .responsive-table, .striped;
+
+      font-size: 1.3rem;
+
+      th {
+        white-space: nowrap;
+      }
+
+      .col {
+        float: none !important;
+      }
+    }
+
+    thead >tr {
+      border-bottom: 1px solid #aaa;
+    }
+  }
+
+  .paginated_collection {
+    @extend .row;
+
+    margin-bottom: 0;
+  }
+
+  .table_actions > a {
+    padding: 0 0.5rem;
+  }
+
+  .table_tools {
+    @extend .row;
+
+    >.batch_actions_selector {
+      @extend .col, .s12;
+    }
+  }
+
+  #collection_selection {
+    @extend .card-content;
+  }
+
+  #index_footer {
+    @extend .col, .s12;
+
+    margin-top: 1rem;
+
+    .download_links {
+      display: inline-block;
+      float: right;
+    }
+
+    .pagination_information {
+      display: inline-block;
+    }
+  }
+
+  #main_content {
+    @extend .card;
+  }
+
+  #sidebar {
+    @extend .col, .s3;
+
+    padding-left: 0 !important;
+  }
+
+  &.admin_comments {
+    .paginated_collection {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .table_tools {
+      padding: 0.5rem 1.5rem 0 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .scopes li {
+      display: inline-block;
+    }
+  }
+}
