@@ -14,6 +14,9 @@ A theme for Active Admin based on Materialize framework.
 //= require activeadmin_materialize_theme
 ```
 
+## Screenshot
+![form](extra/screenshot.png)
+
 ## Do you like it? Star it!
 If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
 
