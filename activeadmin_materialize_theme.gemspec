@@ -12,21 +12,19 @@ Gem::Specification.new do |spec|
   spec.authors     = ['Mattia Roccoberton']
   spec.email       = ['mat@blocknot.es']
   spec.homepage    = 'https://blocknot.es'
-  spec.summary     = 'Active Admin Materialize Theme.'
-  spec.description = 'Active Admin Materialize Theme.'
+  spec.summary     = 'Active Admin Materialize Theme'
+  spec.description = 'A theme for Active Admin based on Materialize framework.'
   spec.license     = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    # spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
   else
     raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.'
   end
 
-  spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir['{app,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.2'
-
-  spec.add_development_dependency 'sqlite3'
+  spec.add_runtime_dependency 'activeadmin', '~> 2.0'
 end
