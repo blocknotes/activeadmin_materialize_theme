@@ -1,4 +1,4 @@
-# Active Admin Materialize Theme
+# Active Admin Materialize Theme [![Gem Version](https://badge.fury.io/rb/activeadmin_materialize_theme.svg)](https://badge.fury.io/rb/activeadmin_materialize_theme)
 A theme for Active Admin based on Materialize framework.
 
 > NOTICE: this is still a beta version
