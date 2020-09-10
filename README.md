@@ -9,6 +9,10 @@ A theme for Active Admin based on Materialize framework.
 ```scss
 @import 'activeadmin_materialize_theme/theme';
 ```
+- (optionally) Enable Roboto font:
+```scss
+@import 'activeadmin_materialize_theme/roboto';
+```
 - Add at the end of your Active Admin javascripts (_app/assets/javascripts/active_admin.js_):
 ```js
 //= require activeadmin_materialize_theme
