@@ -17,6 +17,11 @@ body.active_admin.index {
     thead >tr {
       border-bottom: 1px solid #aaa;
     }
+
+    th, td {
+      padding-bottom: 0.3rem !important;
+      padding-top: 0.3rem !important;
+    }
   }
 
   .paginated_collection {

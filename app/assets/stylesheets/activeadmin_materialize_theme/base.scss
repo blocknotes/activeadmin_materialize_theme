@@ -19,7 +19,21 @@ body.active_admin {
     padding: 0.5rem 0.6rem;
 
     &::after {
-      content: ' ▼';
+      content: ' ≡';
+      font-size: 2rem;
+    }
+  }
+
+  .dropdown-content {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .dropdown_menu_list {
+    margin: 0;
+
+    a.batch_action {
+      color: $link-color;
     }
   }
 
