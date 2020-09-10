@@ -57,9 +57,11 @@
   // --- events ----------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
     setup()
-  })
-
-  $(document).on('has_many_add:after', '.has_many_container', () => {
-    setup()
+    document.querySelectorAll('body.active_admin .has_many_container').forEach((el) => {
+      const observer = new MutationObserver((_mutationsList, _observer) => {
+        initFormFields()
+      })
+      observer.observe(el, { childList: true, subtree: true });
+    })
   })
 })()
