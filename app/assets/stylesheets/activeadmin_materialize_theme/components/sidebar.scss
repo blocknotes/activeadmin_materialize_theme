@@ -28,6 +28,8 @@ body.active_admin .sidebar {
   .sidebar_section {
     @extend .card;
 
+    margin-top: 0.75rem;
+
     >.panel_contents {
       @extend .card-content;
 

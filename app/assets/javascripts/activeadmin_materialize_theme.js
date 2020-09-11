@@ -46,11 +46,29 @@
     })
   }
 
+  function initNestedMenu() {
+    let nested_menu_cnt = 0
+    addClassToElements('dropdown-content', '.menu_item.has_nested >ul')
+    document.querySelectorAll('.menu_item.has_nested').forEach((el) => {
+      nested_menu_cnt += 1
+      el.childNodes.forEach((node) => {
+        if(node.tagName == 'A') {
+          node.className += ' dropdown-trigger'
+          node.setAttribute('data-target', `nested-menu-${nested_menu_cnt}`)
+        }
+        else if(node.tagName == 'UL') {
+          node.setAttribute('id', `nested-menu-${nested_menu_cnt}`)
+        }
+      })
+    })
+  }
+
   function setup() {
     addClassToElements('no-autoinit', 'body.active_admin #header >.tabs')
     initCheckboxes()
     initDropdowns()
     initFormFields()
+    initNestedMenu()
     M.AutoInit()
   }
 

@@ -12,6 +12,14 @@ body.active_admin .header {
     display: inline-block;
   }
 
+  .dropdown-content {
+    background: darken($header-bg-color, 10%);
+
+    a:hover {
+      background: darken($header-bg-color, 10%);
+    }
+  }
+
   #site_title {
     @extend .col, .s3;
 

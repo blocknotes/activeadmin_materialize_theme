@@ -6,13 +6,12 @@ body.active_admin {
   }
 
   .formtastic {
-    padding: 1rem;
+    padding: 2rem;
 
     fieldset {
-      @extend .row;
-
       border: none;
       margin: 0;
+      padding: 0;
     }
 
     .actions ol, .inputs ol {
@@ -22,8 +21,7 @@ body.active_admin {
     }
 
     .actions {
-      margin-top: 1.4rem;
-      padding: 0;
+      margin: 3rem 0 0.5rem 0 !important;
 
       a {
         @extend .btn;
@@ -73,18 +71,12 @@ body.active_admin {
     }
 
     >.inputs {
-      @extend .card;
-
-      padding-bottom: 1rem;
-      padding-top: 3rem;
       position: relative;
+      margin-bottom: 3rem;
 
       >legend {
         display: block;
-        font-size: 1.8rem;
-        left: 1rem;
-        position: absolute;
-        top: 1rem;
+        font-size: 2.2rem;
       }
     }
 
@@ -111,10 +103,10 @@ body.active_admin {
     }
 
     .has_many_container {
-      @extend .card;
+      @extend .z-depth-1;
 
       margin: 1.4rem -0.7rem 0 -0.8rem;
-      padding: 1rem;
+      padding: 2rem;
       position: relative;
 
       >h3 {
@@ -132,8 +124,7 @@ body.active_admin {
       }
 
       >.inputs {
-        margin: 0;
-        padding: 0.8rem;
+        margin-bottom: 2rem;
       }
     }
   }

@@ -1,11 +1,10 @@
 body.active_admin.show {
   .active_admin_comment {
     margin-top: 1rem;
+    padding: 0;
   }
 
   #main_content {
-    @extend .card;
-
     .attributes_table {
       tr >th {
         width: 30rem;

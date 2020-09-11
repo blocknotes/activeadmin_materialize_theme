@@ -15,12 +15,14 @@ body.active_admin {
   }
 
   .dropdown_menu_button {
-    border: 1px solid #ccc;
-    padding: 0.5rem 0.6rem;
+    @extend .btn, .btn-small;
+
+    vertical-align: middle;
 
     &::after {
       content: ' ≡';
-      font-size: 2rem;
+      font-size: 1.8rem;
+      padding-left: 0.5rem;
     }
   }
 
@@ -54,6 +56,29 @@ body.active_admin {
 
     &.flash_warning {
       background: #fb1;
+    }
+  }
+
+  .pagination {
+    background: transparent;
+    box-shadow: none;
+    color: #000;
+    height: auto;
+    line-height: initial;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    a {
+      color: $link-color;
+    }
+
+    >span {
+      display: inline-block;
+      padding: 0.5rem;
+    }
+
+    >.current {
+      background: #eee;
     }
   }
 
@@ -103,12 +128,28 @@ body.active_admin {
     &.without_sidebar #main_content_wrapper {
       @extend .col, .s12;
     }
+
+    >#sidebar {
+      @extend .col, .s3;
+
+      padding-left: 0 !important;
+    }
   }
 
   #dashboard_default_message {
     margin: 2rem auto;
     padding: 2rem 0;
     text-align: center;
+  }
+
+  #main_content {
+    @extend .card;
+
+    margin-top: 0.75rem;
+
+    >.panel {
+      padding: 2rem !important;
+    }
   }
 
   #wrapper {

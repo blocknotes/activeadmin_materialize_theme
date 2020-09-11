@@ -25,8 +25,6 @@ body.active_admin.index {
   }
 
   .paginated_collection {
-    @extend .row;
-
     margin-bottom: 0;
   }
 
@@ -35,10 +33,38 @@ body.active_admin.index {
   }
 
   .table_tools {
-    @extend .row;
-
     >.batch_actions_selector {
-      @extend .col, .s12;
+      display: inline-block;
+      margin-bottom: 1rem;
+      margin-right: 2rem;
+    }
+
+    >.scopes {
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      display: inline-block;
+      vertical-align: middle;
+
+      >ul {
+        margin: 0;
+      }
+
+      .scope {
+        display: inline-block;
+        padding: 0.2rem 1rem;
+
+        &:first-child {
+          border-radius: 0.6rem 0 0 0.6rem;
+        }
+
+        &:last-child {
+          border-radius: 0 0.6rem 0.6rem 0;
+        }
+
+        &.selected {
+          background: #eee;
+        }
+      }
     }
   }
 
@@ -47,9 +73,7 @@ body.active_admin.index {
   }
 
   #index_footer {
-    @extend .col, .s12;
-
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 
     .download_links {
       display: inline-block;
@@ -59,16 +83,6 @@ body.active_admin.index {
     .pagination_information {
       display: inline-block;
     }
-  }
-
-  #main_content {
-    @extend .card;
-  }
-
-  #sidebar {
-    @extend .col, .s3;
-
-    padding-left: 0 !important;
   }
 
   &.admin_comments {
