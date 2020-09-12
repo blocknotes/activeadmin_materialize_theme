@@ -22,6 +22,28 @@ body.active_admin.index {
       padding-bottom: 0.3rem !important;
       padding-top: 0.3rem !important;
     }
+
+    .aa_mt_checkbox {
+      padding: 0 1rem !important;
+    }
+  }
+
+  .index_as_grid {
+    >table {
+      display: block;
+
+      tbody {
+        display: block;
+      }
+
+      tr {
+        display: flex;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .paginated_collection {
@@ -40,16 +62,17 @@ body.active_admin.index {
     }
 
     >.scopes {
+      display: inline-block;
+    }
+
+    .table_tools_segmented_control {
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       display: inline-block;
+      margin: 0 0 0 2rem;
       vertical-align: middle;
 
-      >ul {
-        margin: 0;
-      }
-
-      .scope {
+      >li {
         display: inline-block;
         padding: 0.2rem 1rem;
 

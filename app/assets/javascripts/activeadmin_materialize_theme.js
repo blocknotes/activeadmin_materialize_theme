@@ -13,10 +13,13 @@
       const checkbox = el.querySelector('[type="checkbox"]')
       const label = document.createElement('label')
       const span = document.createElement('span')
+      span.className = 'aa_mt_checkbox'
       label.appendChild(span)
       el.appendChild(label)
       label.insertBefore(checkbox, span)
     })
+    const selector = 'body.active_admin .resource_selection_toggle_cell >label, body.active_admin .choices >label'
+    document.querySelectorAll(selector).forEach((el) => prepareCheckbox(el))
   }
 
   function initDropdowns() {
@@ -36,14 +39,7 @@
   function initFormFields() {
     addClassToElements('input-field', 'body.active_admin .formtastic .input')
     addClassToElements('materialize-textarea', 'body.active_admin .formtastic textarea')
-    document.querySelectorAll('body.active_admin .input-field.boolean > label').forEach((el) => {
-      const text = el.lastChild
-      if (text.nodeType == Node.TEXT_NODE) {
-        const span = document.createElement('span')
-        span.innerHTML = text.textContent
-        text.replaceWith(span)
-      }
-    })
+    document.querySelectorAll('body.active_admin .input-field.boolean > label').forEach((el) => prepareCheckbox(el))
   }
 
   function initNestedMenu() {
@@ -61,6 +57,16 @@
         }
       })
     })
+  }
+
+  function prepareCheckbox(el) {
+    const text = el.lastChild
+    if (text.nodeType == Node.TEXT_NODE) {
+      const span = document.createElement('span')
+      span.innerHTML = text.textContent
+      span.className = 'aa_mt_checkbox'
+      text.replaceWith(span)
+    }
   }
 
   function setup() {

@@ -10,6 +10,12 @@ body.active_admin {
     @extend .btn;
   }
 
+  .aa_mt_checkbox {
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+    vertical-align: middle;
+  }
+
   .col-selectable {
     text-align: center;
   }
@@ -88,11 +94,6 @@ body.active_admin {
 
   .sorted-desc::after {
     content: ' ↓';
-  }
-
-  .resource_selection_cell span {
-    padding: 0 1rem;
-    vertical-align: middle;
   }
 
   .ui-dialog {
