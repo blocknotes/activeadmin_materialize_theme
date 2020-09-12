@@ -2,9 +2,9 @@
 
 (function () {
   // --- functions -------------------------------------------------------------
-  function addClassToElements(class_name, elements) {
+  function addClassToElements(elements, class_name) {
     document.querySelectorAll(elements).forEach(
-      (el) => el.className += ' ' + class_name
+      (el) => el.classList.add(class_name)
     )
   }
 
@@ -37,14 +37,14 @@
   }
 
   function initFormFields() {
-    addClassToElements('input-field', 'body.active_admin .formtastic .input')
-    addClassToElements('materialize-textarea', 'body.active_admin .formtastic textarea')
+    addClassToElements('body.active_admin .formtastic .input', 'input-field')
+    addClassToElements('body.active_admin .formtastic textarea', 'materialize-textarea')
     document.querySelectorAll('body.active_admin .input-field.boolean > label').forEach((el) => prepareCheckbox(el))
   }
 
   function initNestedMenu() {
     let nested_menu_cnt = 0
-    addClassToElements('dropdown-content', '.menu_item.has_nested >ul')
+    addClassToElements('body.active_admin .menu_item.has_nested >ul', 'dropdown-content')
     document.querySelectorAll('.menu_item.has_nested').forEach((el) => {
       nested_menu_cnt += 1
       el.childNodes.forEach((node) => {
@@ -59,6 +59,14 @@
     })
   }
 
+  function initTabs() {
+    document.querySelectorAll('body.active_admin .formtastic >.tabs').forEach(
+      (el) => el.classList.remove('tabs')
+    )
+    addClassToElements('body.active_admin .formtastic .nav-tabs', 'tabs')
+    addClassToElements('body.active_admin .formtastic .nav-tabs >li', 'tab')
+  }
+
   function prepareCheckbox(el) {
     const text = el.lastChild
     if (text.nodeType == Node.TEXT_NODE) {
@@ -70,11 +78,12 @@
   }
 
   function setup() {
-    addClassToElements('no-autoinit', 'body.active_admin #header >.tabs')
+    addClassToElements('body.active_admin #header >.tabs', 'no-autoinit')
     initCheckboxes()
     initDropdowns()
     initFormFields()
     initNestedMenu()
+    initTabs()
     M.AutoInit()
   }
 

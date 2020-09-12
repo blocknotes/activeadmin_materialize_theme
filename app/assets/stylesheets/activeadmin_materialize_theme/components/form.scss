@@ -79,7 +79,7 @@ body.active_admin {
       margin: 0;
     }
 
-    >.inputs {
+    .inputs {
       position: relative;
       margin-bottom: 2rem;
 
@@ -135,6 +135,12 @@ body.active_admin {
       >.inputs {
         margin-bottom: 2rem;
       }
+    }
+
+    .nav-tabs {
+      @extend .z-depth-1;
+
+      margin-bottom: 2rem;
     }
   }
 }
