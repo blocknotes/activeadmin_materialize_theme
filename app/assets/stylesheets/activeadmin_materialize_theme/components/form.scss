@@ -21,7 +21,7 @@ body.active_admin {
     }
 
     .actions {
-      margin: 3rem 0 0.5rem 0 !important;
+      margin: 2rem 0 0.5rem 0 !important;
 
       a {
         @extend .btn;
@@ -55,6 +55,15 @@ body.active_admin {
       }
     }
 
+    >.errors {
+      @extend .z-depth-2;
+
+      background: color('red', 'base');
+      color: #fff;
+      margin: 0.7rem 0;
+      padding: 1rem;
+    }
+
     .field_with_errors {
       >input {
         border-bottom: 1px solid color('materialize-red', 'base');
@@ -72,7 +81,7 @@ body.active_admin {
 
     >.inputs {
       position: relative;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       >legend {
         display: block;
