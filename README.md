@@ -1,8 +1,6 @@
 # Active Admin Materialize Theme [![Gem Version](https://badge.fury.io/rb/activeadmin_materialize_theme.svg)](https://badge.fury.io/rb/activeadmin_materialize_theme)
 A theme for Active Admin based on Materialize framework.
 
-> NOTICE: this is still a beta version
-
 ## Installation
 - Add to the Gemfile: `gem 'activeadmin_materialize_theme'` (and execute `bundle`)
 - In _app/assets/stylesheets/active_admin.scss_) leave only this import line:
