@@ -14,6 +14,11 @@ body.active_admin {
       padding: 0;
     }
 
+    h3 {
+      font-size: 2.2rem;
+      margin: 0.4rem 0 0 0;
+    }
+
     .actions ol, .inputs ol {
       list-style-type: none;
       margin: 0;
@@ -117,11 +122,6 @@ body.active_admin {
       margin: 1.4rem -0.7rem 0 -0.8rem;
       padding: 2rem;
       position: relative;
-
-      >h3 {
-        font-size: 2.2rem;
-        margin: 0.4rem 0 0 0;
-      }
 
       >.has_many_add {
         background-color: color('cyan', 'base');
