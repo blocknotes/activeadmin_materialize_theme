@@ -1,6 +1,8 @@
 //= require ./materialize/bin/materialize
 
 (function () {
+  'use strict'
+
   // --- functions -------------------------------------------------------------
   function addClassToElements(elements, class_name) {
     document.querySelectorAll(elements).forEach(
@@ -26,11 +28,11 @@
     let cnt = 0;
     document.querySelectorAll('body.active_admin .dropdown_menu').forEach((el) => {
       cnt += 1
-      button = el.querySelector('.dropdown_menu_button')
+      const button = el.querySelector('.dropdown_menu_button')
       button.className += ' dropdown-trigger'
       button.setAttribute('data-target', `#dropdown-${cnt}`)
       button.setAttribute('href', 'Javascript:void(0)')
-      list_wrapper = el.querySelector('.dropdown_menu_list_wrapper')
+      const list_wrapper = el.querySelector('.dropdown_menu_list_wrapper')
       list_wrapper.className += ' dropdown-content'
       list_wrapper.setAttribute('id', `#dropdown-${cnt}`)
     })
@@ -40,6 +42,15 @@
     addClassToElements('body.active_admin .formtastic .input', 'input-field')
     addClassToElements('body.active_admin .formtastic textarea', 'materialize-textarea')
     document.querySelectorAll('body.active_admin .input-field.boolean > label').forEach((el) => prepareCheckbox(el))
+  }
+
+  function initNestedEditors() {
+    document.querySelectorAll('body.active_admin .has_many_container').forEach((el) => {
+      const observer = new MutationObserver((_mutationsList, _observer) => {
+        initFormFields()
+      })
+      observer.observe(el, { childList: true, subtree: true });
+    })
   }
 
   function initNestedMenu() {
@@ -85,16 +96,12 @@
     initNestedMenu()
     initTabs()
     M.AutoInit()
+    initNestedEditors()
   }
 
   // --- events ----------------------------------------------------------------
-  document.addEventListener('DOMContentLoaded', () => {
-    setup()
-    document.querySelectorAll('body.active_admin .has_many_container').forEach((el) => {
-      const observer = new MutationObserver((_mutationsList, _observer) => {
-        initFormFields()
-      })
-      observer.observe(el, { childList: true, subtree: true });
-    })
-  })
+  document.addEventListener('DOMContentLoaded', setup)
+
+  // TODO: check theme loading with Turbolinks
+  // document.addEventListener('turbolinks:load', setup)
 })()

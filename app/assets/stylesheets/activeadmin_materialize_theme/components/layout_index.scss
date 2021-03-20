@@ -46,6 +46,12 @@ body.active_admin.index {
     }
   }
 
+  .index_as_block {
+    .resource_selection_cell {
+      display: inline-block;
+    }
+  }
+
   .paginated_collection {
     margin-bottom: 0;
   }
