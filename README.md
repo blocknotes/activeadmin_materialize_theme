@@ -4,6 +4,8 @@
 A theme for Active Admin based on Materialize framework.
 
 ## Installation
+Turbolinks is not supported at the moment.
+
 - Add to the Gemfile: `gem 'activeadmin_materialize_theme'` (and execute `bundle`)
 - In _app/assets/stylesheets/active_admin.scss_) leave only this import line:
 ```scss
@@ -26,9 +28,9 @@ Edit page (with a nested form):
 ![edit_page](extra/screenshot2.png)
 
 ## Do you like it? Star it!
-If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
+If you use this component just star it. A developer is more motivated to improve a project when there is some interest. My other [Active Admin components](https://github.com/blocknotes?utf8=✓&tab=repositories&q=activeadmin&type=source).
 
-Take a look at [other Active Admin components](https://github.com/blocknotes?utf8=✓&tab=repositories&q=activeadmin&type=source) if you are curious.
+Or consider offering me a coffee, it's a small thing but it is greatly appreciated: [about me](https://www.blocknot.es/about-me).
 
 ## Contributors
 - [Mattia Roccoberton](http://blocknot.es): author
