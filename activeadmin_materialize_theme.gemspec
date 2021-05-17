@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.description = 'A theme for Active Admin based on Materialize framework.'
   spec.license     = 'MIT'
 
-  spec.files = Dir['{app,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir['{app,lib}/**/*', 'MIT-LICENSE', 'README.md']
 
   spec.add_runtime_dependency 'activeadmin', '~> 2.0'
   spec.add_runtime_dependency 'sassc', '~> 2.4'
