@@ -1,21 +1,24 @@
+---
 inherit_from:
   - https://relaxed.ruby.style/rubocop.yml
 
 AllCops:
   Exclude:
     - bin/*
+    - db/schema.rb
     - spec/dummy/**/*
+    - vendor/**/*
   NewCops: enable
 
 Gemspec/RequiredRubyVersion:
   Enabled: false
 
-Naming/FileName:
-  Enabled: false
-
 Layout/LineLength:
   Enabled: true
   Max: 120
+
+Naming/FileName:
+  Enabled: false
 
 Style/HashEachMethods:
   Enabled: true
