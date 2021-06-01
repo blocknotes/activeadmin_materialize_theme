@@ -1,6 +1,9 @@
-# Active Admin Materialize Theme [![Gem Version](https://badge.fury.io/rb/activeadmin_materialize_theme.svg)](https://badge.fury.io/rb/activeadmin_materialize_theme) [![Specs](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/specs.yml)
+# Active Admin Materialize Theme
+[![gem version](https://badge.fury.io/rb/activeadmin_materialize_theme.svg)](https://badge.fury.io/rb/activeadmin_materialize_theme) [![Gem downloads](https://badgen.net/rubygems/dt/activeadmin_materialize_theme)](https://rubygems.org/gems/activeadmin_materialize_theme) [![linters](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/linters.yml/badge.svg)](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/linters.yml) [![specs](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/activeadmin_materialize_theme/actions/workflows/specs.yml)
 
-A theme for Active Admin based on Materialize framework.
+A theme for [Active Admin](https://activeadmin.info) based on [Materialize](https://materializecss.com) framework.
+
+Please :star: if you like it.
 
 ## Installation
 
